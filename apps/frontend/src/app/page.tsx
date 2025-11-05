@@ -1,14 +1,45 @@
 "use client";
+
 import { useState } from "react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("http://localhost:4000/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          response: notes,
+          userEmail: name || "anonymous@pct.com",
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to save response");
+      }
+
+      console.log("✅ Saved:", data);
+      setSubmitted(true);
+      setName("");
+      setNotes("");
+    } catch (err: any) {
+      console.error("❌ Error submitting:", err);
+      setError(err.message || "Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -19,7 +50,10 @@ export default function Home() {
           PCT Rush Portal
         </h1>
         <button
-          onClick={() => setSubmitted(false)}
+          onClick={() => {
+            setSubmitted(false);
+            setError("");
+          }}
           className="text-sm px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
         >
           New Entry
@@ -39,12 +73,12 @@ export default function Home() {
                 className="flex flex-col gap-5 text-zinc-700 dark:text-zinc-200"
               >
                 <div className="flex flex-col">
-                  <label className="text-sm font-medium mb-1">Name</label>
+                  <label className="text-sm font-medium mb-1">Your Name</label>
                   <input
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Enter candidate's name"
+                    placeholder="Enter your name"
                     className="p-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
@@ -58,14 +92,22 @@ export default function Home() {
                     placeholder="Write your feedback..."
                     rows={5}
                     className="p-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    required
                   />
                 </div>
 
+                {error && (
+                  <p className="text-red-600 dark:text-red-400 text-sm">
+                    {error}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition transform hover:scale-[1.02]"
+                  disabled={loading}
+                  className="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition transform hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Submit Evaluation
+                  {loading ? "Submitting..." : "Submit Evaluation"}
                 </button>
               </form>
             </>
@@ -74,11 +116,8 @@ export default function Home() {
               <h2 className="text-2xl font-semibold text-green-600 dark:text-green-400 mb-3">
                 Submission Successful 🎉
               </h2>
-              <p className="text-zinc-700 dark:text-zinc-300 mb-1">
-                <strong>Candidate:</strong> {name}
-              </p>
               <p className="text-zinc-700 dark:text-zinc-300 mb-4">
-                <strong>Notes:</strong> {notes}
+                Thanks for submitting your feedback!
               </p>
               <button
                 className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
@@ -97,3 +136,4 @@ export default function Home() {
     </div>
   );
 }
+

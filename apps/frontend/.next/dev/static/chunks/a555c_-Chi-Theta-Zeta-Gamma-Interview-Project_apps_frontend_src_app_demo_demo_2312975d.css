@@ -1,0 +1,37 @@
+/* [project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css [app-client] (css) */
+.demo-container {
+  background-color: #add8e6;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.demo-title {
+  color: #00008b;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.demo-text {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.demo-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: navy;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.demo-button:hover {
+  background-color: #4169e1;
+}
+
+/*# sourceMappingURL=a555c_-Chi-Theta-Zeta-Gamma-Interview-Project_apps_frontend_src_app_demo_demo_2312975d.css.map*/

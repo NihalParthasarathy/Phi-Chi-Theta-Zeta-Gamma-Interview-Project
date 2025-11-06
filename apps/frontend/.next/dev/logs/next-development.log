@@ -1,0 +1,343 @@
+[00:00:00.998] Server  LOG      ✓ Ready in 778ms
+[00:00:04.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.511] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:00:07.504] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.504] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:00:10.114] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.114] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:00:18.162] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.281] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:00:27.022] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:27.022] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:01:38.027] Server  LOG      ✓ Compiled in 28ms
+[00:01:40.911] Server  LOG      ✓ Compiled in 12ms
+[00:01:42.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:7
+Parsing ecmascript source code failed
+  16 |         <buttin
+  17 |         Click Me
+> 18 |       </button>
+     |       ^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:42.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:8
+Parsing ecmascript source code failed
+  16 |         <buttin
+  17 |         Click Me
+> 18 |       </button>
+     |        ^^^^^^^^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:42.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:7
+Parsing ecmascript source code failed
+  16 |         <buttin
+  17 |         Click Me
+> 18 |       </button>
+     |       ^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:42.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:8
+Parsing ecmascript source code failed
+  16 |         <buttin
+  17 |         Click Me
+> 18 |       </button>
+     |        ^^^^^^^^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:44.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:7
+Parsing ecmascript source code failed
+  16 |         <button
+  17 |         Click Me
+> 18 |       </button>
+     |       ^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:44.013] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:8
+Parsing ecmascript source code failed
+  16 |         <button
+  17 |         Click Me
+> 18 |       </button>
+     |        ^^^^^^^^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:44.014] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:7
+Parsing ecmascript source code failed
+  16 |         <button
+  17 |         Click Me
+> 18 |       </button>
+     |       ^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:01:44.014] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx:18:8
+Parsing ecmascript source code failed
+  16 |         <button
+  17 |         Click Me
+> 18 |       </button>
+     |        ^^^^^^^^
+  19 |     </div>
+  20 |   );
+  21 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component SSR]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]

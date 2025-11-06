@@ -1,9 +1,20 @@
+/* Import Tailwind's base styles - this resets default browser styles and applies Tailwind's foundational CSS */
 @tailwind base;
+
+/* Import Tailwind's component classes - this gives you pre-built components like buttons, forms, etc. */
 @tailwind components;
+
+/* Import Tailwind's utility classes - this provides classes like 'text-center', 'bg-blue-500', 'p-4', etc. */
 @tailwind utilities;
 
+/* Select the <body> element - this is the main container of your entire webpage */
 body {
+  /* Set the background color using a CSS variable named '--background' (defined elsewhere in your project) */
   background: var(--background);
+  
+  /* Set the text color using a CSS variable named '--foreground' (defined elsewhere in your project) */
   color: var(--foreground);
+  
+  /* Set the font family - browser will try Arial first, then Helvetica, then any sans-serif font available */
   font-family: Arial, Helvetica, sans-serif;
 }

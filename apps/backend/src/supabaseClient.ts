@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 
 // Import dotenv so we can use variables from our .env file (like API keys)
 import dotenv from "dotenv";
-
+//hi
 // Load the variables from the .env file into process.env
 dotenv.config();
 

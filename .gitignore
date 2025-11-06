@@ -38,6 +38,7 @@ apps/backend/.env
 
 # vercel
 .vercel
+node_modules/
 
 # typescript
 *.tsbuildinfo

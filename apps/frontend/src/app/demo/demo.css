@@ -1,0 +1,34 @@
+.demo-container {
+  min-height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.demo-title {
+  color: darkblue;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.demo-text {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.demo-button {
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  background-color: royalblue;
+}

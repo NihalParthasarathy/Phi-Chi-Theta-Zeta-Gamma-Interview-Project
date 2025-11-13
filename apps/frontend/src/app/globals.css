@@ -1,11 +1,5 @@
-/* Import Tailwind's base styles - this resets default browser styles and applies Tailwind's foundational CSS */
-@tailwind base;
-
-/* Import Tailwind's component classes - this gives you pre-built components like buttons, forms, etc. */
-@tailwind components;
-
-/* Import Tailwind's utility classes - this provides classes like 'text-center', 'bg-blue-500', 'p-4', etc. */
-@tailwind utilities;
+/* Import Tailwind CSS v4 - this includes all Tailwind styles */
+@import "tailwindcss";
 
 /* Select the <body> element - this is the main container of your entire webpage */
 body {

@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "./demo.css";
 
 // Helper function to convert text to heart-masked text
-const maskTextWithHearts = (text, heartCount) => {
+const maskTextWithHearts = (text: string, heartCount: number): string => {
   if (!text) return "";
   const textLength = text.length;
   // Get the number of characters that should remain unmasked
@@ -20,10 +20,10 @@ const maskTextWithHearts = (text, heartCount) => {
 export default function DemoPage() {
   const [isClicked, setIsClicked] = useState(false);
   const [heartCount, setHeartCount] = useState(0); // Tracks how many letters are hearts
-  const intervalRef = useRef(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   // All the text content we need to track and transform
-  const textContent = {
+  const textContent: Record<string, string> = {
     title: "Welcome to the Demo Page",
     paragraph: "This is where we learn how TSX works step by step 🎓",
     zachButtonText: "Click to text Zach and tell him you love him"
@@ -50,7 +50,9 @@ export default function DemoPage() {
         setHeartCount(prevCount => {
           if (prevCount >= totalChars) {
             // Stop the interval once all characters are converted
-            clearInterval(intervalRef.current);
+            if (intervalRef.current) {
+              clearInterval(intervalRef.current);
+            }
             return totalChars;
           }
           return prevCount + 1; // Increment the count
@@ -58,12 +60,16 @@ export default function DemoPage() {
       }, 50); // 50 milliseconds per heart
 
       // Cleanup the interval when the component unmounts
-      return () => clearInterval(intervalRef.current);
+      return () => {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+      };
     }
   }, [isClicked, textContent]);
   
   // Use a helper function to determine the transformed text based on heartCount
-  const getTransformedText = (key) => {
+  const getTransformedText = (key: string): string => {
     // The total number of hearts to apply across ALL elements
     let heartsLeftToApply = heartCount;
 

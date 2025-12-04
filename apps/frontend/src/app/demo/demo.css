@@ -1,11 +1,20 @@
 .demo-container {
   min-height: 100vh;
-  background-color: lightblue;
+  background-color: #add8e6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
+}
+
+.demo-small-button {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
 }
 
 .demo-title {
@@ -31,4 +40,51 @@
 
 .demo-button:hover {
   background-color: royalblue;
+}
+
+.demo-text-zach {
+  text-align: left;
+  color: black;
+  font-size: 300%;
+  font-family: "Courier New", Courier, monospace;
+}
+.demo-text-zach:hover {
+  color:#333;
+}
+
+/* --- New CSS for Moving Gradient Effect --- */
+
+/* 1. Define the animation */
+@keyframes moving-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 2. Define the gradient-active class */
+.gradient-active {
+  /* Set a multi-color gradient */
+  background: linear-gradient(-45deg, #add8e6, #e73c7e, #e7a0a0, #3b0612);
+  /* Make the background area very large */
+  background-size: 400% 400%;
+  /* Apply the animation */
+  animation: moving-gradient 15s ease infinite;
+}
+
+/* Optional: Stop the old background-color from interfering */
+.demo-container {
+  /* ... existing styles ... */
+  min-height: 100vh;
+  /* background-color: lightblue; <-- Remove or comment out this line to avoid conflict */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }

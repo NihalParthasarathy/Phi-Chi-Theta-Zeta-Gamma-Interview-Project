@@ -16,6 +16,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   // Create a state variable 'error' with initial value "" - stores any error messages
   const [error, setError] = useState("");
+  // Create a state variable 'darkMode' with initial value false - tracks if dark mode is enabled
+  const [darkMode, setDarkMode] = useState(false);
 
   // Define an async function to handle form submission - 'e' is the form event
   const handleSubmit = async (e: React.FormEvent) => {
@@ -75,175 +77,124 @@ export default function Home() {
 
   // Return the JSX (HTML-like structure) that defines what appears on the page
   return (
-    // Main container div with full screen height, gradient background, flexbox layout, centered content, and padding
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-zinc-900 dark:via-zinc-950 dark:to-black flex flex-col items-center p-6">
-      // Navbar section - comment in JSX
+    <div className={`min-h-screen flex flex-col items-center p-6 ${darkMode ? 'dark bg-zinc-950' : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'}`}>
       {/* Navbar */}
-      // Header element with max width, flexbox for spacing, padding, margin, and bottom border
       <header className="w-full max-w-3xl flex justify-between items-center py-4 mb-8 border-b border-zinc-200 dark:border-zinc-800">
-        // Heading with large text, bold font, blue color, and tight letter spacing
         <h1 className="text-2xl font-bold text-blue-700 dark:text-blue-400 tracking-tight">
-          // The text content of the heading
           PCT Rush Portal
-        // Close h1 tag
         </h1>
-        // Button that resets the form when clicked
-        <button
-          // onClick handler - runs this function when button is clicked
-          onClick={() => {
-            // Reset submitted state to false (shows form again)
-            setSubmitted(false);
-            // Clear any error messages
-            setError("");
-          }}
-          // Button styling classes - small text, padding, rounded corners, blue background, hover effects
-          className="text-sm px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
-        >
-          // Button text
-          New Entry
-        // Close button tag
-        </button>
-      // Close header tag
+        <div className="flex gap-3 items-center">
+          {/* Dark/Light mode toggle switch */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="relative w-16 h-8 rounded-full transition-colors duration-300 focus:outline-none"
+            style={{ backgroundColor: darkMode ? '#3b82f6' : '#e5e7eb' }}
+          >
+            {/* Sliding circle */}
+            <div
+              className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center text-xs ${
+                darkMode ? 'translate-x-8' : 'translate-x-0'
+              }`}
+            >
+              {darkMode ? '🌙' : '☀️'}
+            </div>
+          </button>
+          {/* Button that resets the form when clicked */}
+          <button
+            onClick={() => {
+              // Reset submitted state to false (shows form again)
+              setSubmitted(false);
+              // Clear any error messages
+              setError("");
+            }}
+            className="text-sm px-4 py-2 rounded-lg bg-blue-400 text-white hover:bg-blue-500 transition"
+          >
+            New Entry
+          </button>
+        </div>
       </header>
 
-      // Form / Submission Card comment
       {/* Form / Submission Card */}
-      // Main content area with max width
       <main className="w-full max-w-3xl">
-        // Card container with background, blur effect, rounded corners, shadow, border, and padding
         <div className="bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md rounded-2xl shadow-lg p-8 border border-zinc-200 dark:border-zinc-800 transition-all">
-          // Conditional rendering - if form NOT submitted, show form; otherwise show success message
+          {/* Conditional rendering - if form NOT submitted, show form; otherwise show success message */}
           {!submitted ? (
-            // Fragment to group multiple elements without adding extra DOM nodes
             <>
-              // Heading for the form section
               <h2 className="text-xl font-semibold mb-6 text-zinc-800 dark:text-zinc-100">
-                // Heading text
                 Interview Evaluation
-              // Close h2 tag
               </h2>
-              // Form element with onSubmit handler and flexbox layout with gap between elements
               <form
-                // When form is submitted, call handleSubmit function
                 onSubmit={handleSubmit}
-                // Styling - vertical flex layout with gaps between form fields
                 className="flex flex-col gap-5 text-zinc-700 dark:text-zinc-200"
               >
-                // Container div for name input field
+                {/* Container div for name input field */}
                 <div className="flex flex-col">
-                  // Label for the name input
                   <label className="text-sm font-medium mb-1">Your Name</label>
-                  // Text input field for name
                   <input
-                    // Input type is text (single line)
                     type="text"
-                    // Controlled input - value is tied to 'name' state variable
                     value={name}
-                    // When user types, update 'name' state with new value
                     onChange={(e) => setName(e.target.value)}
-                    // Placeholder text shown when input is empty
                     placeholder="Enter your name"
-                    // Styling for the input field - padding, border, background, focus effects
                     className="p-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    // Makes this field required (can't submit empty)
                     required
                   />
-                // Close div container
                 </div>
 
-                // Container div for notes textarea
+                {/* Container div for notes textarea */}
                 <div className="flex flex-col">
-                  // Label for the notes textarea
                   <label className="text-sm font-medium mb-1">Notes</label>
-                  // Textarea element for multi-line text input
                   <textarea
-                    // Controlled textarea - value tied to 'notes' state
                     value={notes}
-                    // When user types, update 'notes' state
                     onChange={(e) => setNotes(e.target.value)}
-                    // Placeholder text shown when empty
                     placeholder="Write your feedback..."
-                    // Number of visible text rows (5 lines tall)
                     rows={5}
-                    // Styling - same as input above, plus 'resize-none' prevents user from resizing
                     className="p-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                    // Makes this field required
                     required
                   />
-                // Close div container
                 </div>
 
-                // Conditional rendering - only show error message if error exists
+                {/* Conditional rendering - only show error message if error exists */}
                 {error && (
-                  // Paragraph element for error message in red
                   <p className="text-red-600 dark:text-red-400 text-sm">
-                    // Display the error message
                     {error}
-                  // Close p tag
                   </p>
                 )}
 
-                // Submit button
+                {/* Submit button */}
                 <button
-                  // Button type is submit (triggers form submission)
                   type="submit"
-                  // Disable button while loading (prevents double submission)
                   disabled={loading}
-                  // Button styling - margin, blue background, hover effects, disabled state styling
                   className="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition transform hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  // Conditional text - show "Submitting..." while loading, otherwise show "Submit Evaluation"
                   {loading ? "Submitting..." : "Submit Evaluation"}
-                // Close button tag
                 </button>
-              // Close form tag
               </form>
-            // Close fragment
             </>
-          // Else block - shown when submitted is true
           ) : (
-            // Success message container with centered text
+            // Success message container
             <div className="text-center">
-              // Success heading in green
               <h2 className="text-2xl font-semibold text-green-600 dark:text-green-400 mb-3">
-                // Success message with emoji
                 Submission Successful 🎉
-              // Close h2 tag
               </h2>
-              // Thank you message paragraph
               <p className="text-zinc-700 dark:text-zinc-300 mb-4">
-                // Thank you text
                 Thanks for submitting your feedback!
-              // Close p tag
               </p>
-              // Button to submit another response
+              {/* Button to submit another response */}
               <button
-                // Styling for the button
                 className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                // When clicked, set submitted back to false to show form again
                 onClick={() => setSubmitted(false)}
               >
-                // Button text
                 Submit Another
-              // Close button tag
               </button>
-            // Close success message div
             </div>
           )}
-        // Close card container div
         </div>
-      // Close main tag
       </main>
 
-      // Footer element with top margin and gray text
+      {/* Footer */}
       <footer className="mt-10 text-sm text-zinc-500 dark:text-zinc-600">
-        // Copyright text
         © 2025 Phi Chi Theta | Built by Rush Tech Team
-      // Close footer tag
       </footer>
-    // Close main container div
     </div>
-  // Close return statement
   );
-// Close Home function
 }

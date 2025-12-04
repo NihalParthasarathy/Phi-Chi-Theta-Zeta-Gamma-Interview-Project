@@ -1,0 +1,85 @@
+/* [project]/src/app/demo/demo.css [app-client] (css) */
+.demo-container {
+  background-color: #add8e6;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.demo-small-button {
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.demo-title {
+  color: #00008b;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.demo-text {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.demo-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: navy;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.demo-button:hover {
+  background-color: #4169e1;
+}
+
+.demo-text-zach {
+  text-align: left;
+  color: #000;
+  font-family: Courier New, Courier, monospace;
+  font-size: 300%;
+}
+
+.demo-text-zach:hover {
+  color: #333;
+}
+
+@keyframes moving-gradient {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.gradient-active {
+  background: linear-gradient(-45deg, #add8e6, #e73c7e, #e7a0a0, #3b0612) 0 0 / 400% 400%;
+  animation: 15s infinite moving-gradient;
+}
+
+.demo-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_app_demo_demo_fb3bda75.css.map*/

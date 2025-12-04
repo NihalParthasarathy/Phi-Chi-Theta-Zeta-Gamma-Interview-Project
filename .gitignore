@@ -36,6 +36,7 @@ apps/backend/.env
 .env.local
 .env.*
 
+
 # vercel
 .vercel
 node_modules/

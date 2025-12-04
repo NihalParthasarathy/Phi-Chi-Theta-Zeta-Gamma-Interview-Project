@@ -1,5 +1,149 @@
-[00:00:10.458] Server  LOG      ✓ Ready in 7.6s
-[00:00:13.572] Server  LOG      ○ Compiling / ...
-[00:00:31.294] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.691] Browser LOG     ✅ Saved: {"message":"Response saved successfully!"}
-[00:05:35.205] Browser LOG     ✅ Saved: {"message":"Response saved successfully!"}
+[00:00:00.764] Server  LOG      ✓ Ready in 546ms
+[00:00:04.680] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.760] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.823] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:00:05.306] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:02:11.706] Browser LOG     ✅ Saved: {"message":"Response saved successfully!"}
+[00:28:06.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:06.493] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
++                       hidden={true}
+-                       hidden={null}
+-                       id="focusframe-notifications"
+-                       style={{position:"fixed",top:"20px",right:"20px",z-index:"10000",pointer-events:"none",font-family:"-apple-sys..."}}
+                      >
+                        <__next_metadata_boundary__>
++                         <Suspense name="Next.Metadata">
+                    ...
+                  ...
+
+[00:30:02.527] Server  LOG      ✓ Compiled in 37ms
+[00:30:03.303] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/kushpatel/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css:36:1: Unknown word .demo
+    [at Input.error (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.other (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:437:12)]
+    [at Parser.parse (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parse.js:11:12)]
+    [at new LazyResult (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]
+[00:30:03.304] Browser ERROR   ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/kushpatel/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css:36:1: Unknown word .demo
+    [at Input.error (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.other (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:437:12)]
+    [at Parser.parse (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/parse.js:11:12)]
+    [at new LazyResult (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/demo.css [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Client Component Browser]
+    ./Phi-Chi-Theta-Zeta-Gamma-Interview-Project/apps/frontend/src/app/demo/page.tsx [Server Component]

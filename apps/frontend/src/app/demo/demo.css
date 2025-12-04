@@ -48,6 +48,7 @@
   font-size: 300%;
   font-family: "Courier New", Courier, monospace;
 }
+
 .demo-text-zach:hover {
   color:#333;
 }
@@ -75,16 +76,4 @@
   background-size: 400% 400%;
   /* Apply the animation */
   animation: moving-gradient 15s ease infinite;
-}
-
-/* Optional: Stop the old background-color from interfering */
-.demo-container {
-  /* ... existing styles ... */
-  min-height: 100vh;
-  /* background-color: lightblue; <-- Remove or comment out this line to avoid conflict */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
 }

@@ -97,7 +97,7 @@ export default function Login() {
 
       {/* Footer */}
       <footer className="mt-10 text-sm text-zinc-500 dark:text-zinc-600">
-        © 2025 Phi Chi Theta | Built by Rush Tech Team
+        © 2025 Phi Chi Theta | Built by PCTech
       </footer>
     </div>
   );
